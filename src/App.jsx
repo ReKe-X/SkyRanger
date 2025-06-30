@@ -215,8 +215,8 @@ const App = () => {
   const [alerts, setAlerts] = useState([]);
 
   useEffect(() => {
-    const client = new W3CWebSocket('ws://localhost:8765');
-
+    // const client = new W3CWebSocket('ws://localhost:8765');
+    const client = new W3CWebSocket('ws://172.22.172.212:8765');
     client.onopen = () => {
       console.log('WebSocket 连接已打开');
       client.send(JSON.stringify({ type: 'requestSensorData' }));
