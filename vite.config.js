@@ -4,4 +4,5 @@ import { defineConfig } from 'vite';
 
    export default defineConfig({
      plugins: [react(), tailwindcss()],
+     base: './', // 确保相对路径，Capacitor 默认支持
    });
